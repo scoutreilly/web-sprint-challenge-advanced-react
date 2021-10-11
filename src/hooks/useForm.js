@@ -1,9 +1,10 @@
 // write your custom hook here to control your checkout form
 import { useState } from "react";
+import useLocal from "./UseLocal";
 
 const useForm = (initialValue) => {
   // using the state and handleChanges from CheckoutForm.js to create a custom hook
-  const [values, setValues] = useState(initialValue);
+  const [values, setValues] = useLocal("fields", initialValue);
 
   const handleChanges = (e) => {
     // console.log(e.target.value);

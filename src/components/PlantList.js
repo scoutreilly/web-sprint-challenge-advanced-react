@@ -18,6 +18,11 @@ export default class PlantList extends Component {
       )
       .catch((err) => console.log(err));
   }
+  // I'm receiving an error from codegrad about updating react state on an unmounted component. I've tried a few things here with the unmount function but I can't seem to resolve the issue.
+  // componentWillUnmount() {
+  //   return;
+  // }
+
   // when the component mounts:
   //   - fetch data from the server endpoint - http://localhost:3333/plants
   //   - set the returned plants array to this.state.plants
