@@ -6,7 +6,7 @@ export default class PlantList extends Component {
   state = {
     plants: [],
   };
-
+  // using componentDidMount to collect plant data and rerender the page contents
   componentDidMount() {
     axios
       .get("http://localhost:3333/plants")
